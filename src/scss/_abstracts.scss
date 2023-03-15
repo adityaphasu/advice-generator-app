@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+// COLORS
+
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$grayish-blue: hsl(216, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(219, 24%, 16%);
+
+// FONT
+
+$font-family: "Manrope", sans-serif;
+$font-size: 1.75rem;
+
+$breakpoints: (
+  "small": 29rem,
+  "medium": 47rem,
+  "large": 80rem,
+);
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}

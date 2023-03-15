@@ -1,0 +1,64 @@
+@use "./abstracts.scss" as *;
+@use "./reset";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $dark-blue;
+  padding-inline: 1rem;
+  text-align: center;
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+.advice-card {
+  background-color: $dark-grayish-blue;
+  width: 21.5rem;
+  padding: 2.7rem 1rem 0.5rem;
+  border-radius: 0.625rem;
+
+  @include mq(medium) {
+    width: 34rem;
+    padding: 2.7rem 2.7rem 0.5rem;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1563rem;
+    color: $neon-green;
+
+    @include mq(medium) {
+      font-size: 1rem;
+    }
+  }
+
+  &__text {
+    color: $light-cyan;
+    padding-block: 1.3rem;
+    transition: all 500ms ease-in-out;
+
+    @include mq(medium) {
+      padding-block: 1.3rem 2.5rem;
+    }
+  }
+
+  &__img {
+    margin: auto;
+  }
+
+  &__button {
+    background-color: $neon-green;
+    border-radius: 100%;
+    border: none;
+    padding: 1.2rem;
+    transform: translateY(2.5rem);
+    transition: box-shadow 500ms ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 45px $neon-green;
+    }
+  }
+}
