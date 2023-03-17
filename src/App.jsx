@@ -43,7 +43,7 @@ function App() {
       </picture>
 
       <button className="advice-card__button" onClick={fetchApiData} aria-label="generate advice">
-        <img src={Dice} alt=""></img>
+        <img src={Dice} alt="" className="advice-card__dice"></img>
       </button>
     </main>
   );
