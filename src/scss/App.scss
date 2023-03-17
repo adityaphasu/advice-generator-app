@@ -42,7 +42,6 @@ body {
   &__text {
     color: $light-cyan;
     padding-block: 1.3rem;
-    transition: all 500ms ease-in-out;
 
     @include mq(medium) {
       padding-block: 1.3rem 2.5rem;
@@ -59,10 +58,18 @@ body {
     border: none;
     padding: 1.2rem;
     transform: translateY(2.5rem);
-    transition: box-shadow 500ms ease-in-out, transform 1s ease-in-out;
+    transition: box-shadow 500ms ease-in-out;
 
     &:hover {
       box-shadow: 0 0 45px $neon-green;
+
+      .advice-card__dice {
+        transform: scale(1.2);
+      }
     }
+  }
+
+  &__dice {
+    transition: transform 500ms ease-in-out;
   }
 }
