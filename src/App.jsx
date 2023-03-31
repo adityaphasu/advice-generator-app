@@ -30,7 +30,7 @@ function App() {
 
   return (
     <main className="advice-card">
-      <h1 className="advice-card__heading">Advice {loading ? "#???" : <>#{advice.id}</>}</h1>
+      <h1 className="advice-card__heading">Advice {loading ? "#???" : `#${advice.id}`}</h1>
       {loading ? (
         <SyncLoader color="#52ffa8" margin="0.5rem" className="advice-card__loader"></SyncLoader>
       ) : (
